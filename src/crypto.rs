@@ -132,6 +132,7 @@ pub fn get_passphrase_for_read() -> Result<String> {
 }
 
 /// Encrypt raw bytes using a recipient public key (in-memory, for testing).
+#[cfg(test)]
 fn encrypt_bytes(plaintext: &[u8], recipient: &x25519::Recipient) -> Result<Vec<u8>> {
     let encryptor = age::Encryptor::with_recipients(vec![Box::new(recipient.clone())])
         .context("Failed to create encryptor")?;
@@ -145,6 +146,7 @@ fn encrypt_bytes(plaintext: &[u8], recipient: &x25519::Recipient) -> Result<Vec<
 }
 
 /// Encrypt raw bytes using a passphrase (in-memory, for testing).
+#[cfg(test)]
 fn encrypt_bytes_with_passphrase(plaintext: &[u8], passphrase: &str) -> Result<Vec<u8>> {
     let encryptor = age::Encryptor::with_user_passphrase(Secret::new(passphrase.to_owned()));
 
