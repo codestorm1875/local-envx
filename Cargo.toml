@@ -6,6 +6,8 @@ description = "A local-first CLI for working securely with .env files."
 license = "MIT"
 repository = "https://github.com/codestorm1875/envx"
 readme = "README.md"
+keywords = ["env", "dotenv", "encryption", "cli", "age"]
+categories = ["command-line-utilities", "config"]
 
 [dependencies]
 anyhow = "1"
