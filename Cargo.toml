@@ -1,5 +1,5 @@
 [package]
-name = "envx"
+name = "local-envx"
 version = "0.1.0"
 edition = "2024"
 description = "A local-first CLI for working securely with .env files."
@@ -8,6 +8,10 @@ repository = "https://github.com/codestorm1875/envx"
 readme = "README.md"
 keywords = ["env", "dotenv", "encryption", "cli", "age"]
 categories = ["command-line-utilities", "config"]
+
+[[bin]]
+name = "envx"
+path = "src/main.rs"
 
 [dependencies]
 anyhow = "1"

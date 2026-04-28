@@ -35,7 +35,7 @@ If you have the Rust toolchain installed, you can build and install directly wit
 cargo install --path .
 ```
 
-*(Note: Once published to crates.io, this will become simply `cargo install envx`)*
+*(Note: Once published to crates.io, this will become simply `cargo install local-envx`)*
 
 ### Option 2: Install Script
 
