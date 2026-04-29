@@ -85,10 +85,14 @@ pub enum Command {
         #[arg(long)]
         output: Option<String>,
     },
-    /// Generate shell completion scripts.
+    /// Generate or install shell completion scripts.
     Completions {
-        /// Shell to generate completions for.
+        /// Shell to generate completions for. If omitted, attempts to auto-detect from $SHELL.
         #[arg(value_enum)]
-        shell: CompletionShell,
+        shell: Option<CompletionShell>,
+
+        /// Automatically install the completion script for the detected shell.
+        #[arg(long)]
+        install: bool,
     },
 }

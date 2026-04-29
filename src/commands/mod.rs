@@ -29,6 +29,6 @@ pub fn run(command: Command) -> Result<()> {
         Command::Decrypt { passphrase } => decrypt::run(passphrase),
         Command::Merge { file, output } => merge::run(file, output),
         Command::Expand { file, output } => expand::run(file, output),
-        Command::Completions { shell } => completions::run(shell),
+        Command::Completions { shell, install } => completions::run(shell, install),
     }
 }
