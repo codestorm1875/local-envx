@@ -32,10 +32,8 @@ cargo build --release
 If you have the Rust toolchain installed, you can build and install directly with Cargo:
 
 ```bash
-cargo install --path .
+cargo install local-envx 
 ```
-
-*(Note: Once published to crates.io, this will become simply `cargo install local-envx`)*
 
 ### Option 2: Install Script
 
